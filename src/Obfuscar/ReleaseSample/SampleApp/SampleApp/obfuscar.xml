@@ -1,0 +1,15 @@
+﻿<?xml version='1.0'?>
+<Obfuscator>
+
+	<Var name="HidePrivateApi" value="true" />
+	<Var name="KeepPublicApi" value="false"></Var>\
+	
+	<Var name="KeyFile" value=".\test.snk" />
+	
+	<!--\MAUITech\src\Obfuscar\DebugSample\obfuscar\Debug-->
+	<Var name="OutPath" value="..\..\..\..\..\..\obfuscar\Release" />
+	
+	<Module file="SampleApp.dll" >
+	</Module>
+	
+</Obfuscator>

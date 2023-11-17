@@ -6,3 +6,7 @@ dotnet publish -f net8.0-windows10.0.19041.0 -c Debug -p:RuntimeIdentifierOverri
 
 Publish Release:
 dotnet publish -f net8.0-windows10.0.19041.0 -c Release -p:RuntimeIdentifierOverride=win10-x64 -p:WindowsPackageType=None -p:WindowsAppSDKSelfContained=true
+
+Warning!
+The dll from publish folder is not obfuscated!
+We need to copy the obfuscated dll to this folder if we want to share the publish folder.
