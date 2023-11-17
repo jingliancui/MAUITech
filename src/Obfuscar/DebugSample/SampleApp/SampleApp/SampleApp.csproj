@@ -60,6 +60,31 @@
 		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
+		<PackageReference Include="Obfuscar" Version="2.2.38">
+		  <PrivateAssets>all</PrivateAssets>
+		  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
 	</ItemGroup>
 
+	<ItemGroup>
+	  <None Update="obfuscar.xml">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	</ItemGroup>
+
+	<!--
+	Debug
+	-->
+	<Target Name="CustomAfterBuild" AfterTargets="Build" Condition="'$(Configuration)' == 'Debug'">
+		<Message Importance="High" Text="Obfuscar task has been called." />
+		<!--WorkingDirectory is the path which obfuscar process the obfuscate work, here is the exe's path-->
+		<Exec WorkingDirectory="C:\Users\ericc\Documents\GitHub\MAUITech\src\Obfuscar\DebugSample\SampleApp\SampleApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64" 
+			  Command="$(Obfuscar) $(ProjectDir)obfuscar.xml" />
+		<!--SourceFiles is the obfuscated file's path-->
+		<!--DestinationFolder is exe's path-->
+		<Copy 
+			SourceFiles="C:\Users\ericc\Documents\GitHub\MAUITech\src\Obfuscar\DebugSample\obfuscar\Debug\SampleApp.dll" 
+			DestinationFolder="C:\Users\ericc\Documents\GitHub\MAUITech\src\Obfuscar\DebugSample\SampleApp\SampleApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64" />
+	</Target>
+	
 </Project>

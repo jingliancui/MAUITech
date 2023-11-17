@@ -1,4 +1,6 @@
-﻿namespace SampleApp
+﻿using System.Reflection;
+
+namespace SampleApp
 {
     public partial class MainPage : ContentPage
     {
@@ -9,6 +11,7 @@
             InitializeComponent();
         }
 
+        [Obfuscation(Exclude = true)]
         private void OnCounterClicked(object sender, EventArgs e)
         {
             count++;
