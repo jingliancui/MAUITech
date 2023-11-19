@@ -2,7 +2,7 @@
 <Obfuscator>
 
 	<Var name="HidePrivateApi" value="true" />
-	<Var name="KeepPublicApi" value="false"></Var>\
+	<Var name="KeepPublicApi" value="false"></Var>
 	
 	<Var name="KeyFile" value=".\test.snk" />
 	
