@@ -13,3 +13,6 @@ We need to copy the obfuscated dll to this folder if we want to share the publis
 
 sn
 https://learn.microsoft.com/en-us/dotnet/framework/tools/sn-exe-strong-name-tool
+
+binding should choose the compile binding
+https://learn.microsoft.com/en-us/dotnet/maui/fundamentals/data-binding/compiled-bindings?view=net-maui-8.0
