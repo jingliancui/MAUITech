@@ -57,6 +57,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
 		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
@@ -64,6 +65,12 @@
 		  <PrivateAssets>all</PrivateAssets>
 		  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="SecondPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	</ItemGroup>
 
 	<ItemGroup>
@@ -78,13 +85,10 @@
 	<Target Name="CustomAfterBuild" AfterTargets="Build" Condition="'$(Configuration)' == 'Release'">
 		<Message Importance="High" Text="Obfuscar task has been called." />
 		<!--WorkingDirectory is the path which obfuscar process the obfuscate work, here is the exe's path-->
-		<Exec WorkingDirectory="C:\Users\ericc\Documents\GitHub\MAUITech\src\Obfuscar\ReleaseSample\SampleApp\SampleApp\bin\Release\net8.0-windows10.0.19041.0\win10-x64" 
-			  Command="$(Obfuscar) $(ProjectDir)obfuscar.xml" />
+		<Exec WorkingDirectory="C:\Users\ericc\Documents\GitHub\MAUITech\src\Obfuscar\ReleaseSample\SampleApp\SampleApp\bin\Release\net8.0-windows10.0.19041.0\win10-x64" Command="$(Obfuscar) $(ProjectDir)obfuscar.xml" />
 		<!--SourceFiles is the obfuscated file's path-->
 		<!--DestinationFolder is exe's path-->
-		<Copy 
-			SourceFiles="C:\Users\ericc\Documents\GitHub\MAUITech\src\Obfuscar\ReleaseSample\obfuscar\Release\SampleApp.dll" 
-			DestinationFolder="C:\Users\ericc\Documents\GitHub\MAUITech\src\Obfuscar\ReleaseSample\SampleApp\SampleApp\bin\Release\net8.0-windows10.0.19041.0\win10-x64" />
+		<Copy SourceFiles="C:\Users\ericc\Documents\GitHub\MAUITech\src\Obfuscar\ReleaseSample\obfuscar\Release\SampleApp.dll" DestinationFolder="C:\Users\ericc\Documents\GitHub\MAUITech\src\Obfuscar\ReleaseSample\SampleApp\SampleApp\bin\Release\net8.0-windows10.0.19041.0\win10-x64" />
 	</Target>
 	
 </Project>
