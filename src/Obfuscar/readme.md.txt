@@ -16,3 +16,6 @@ https://learn.microsoft.com/en-us/dotnet/framework/tools/sn-exe-strong-name-tool
 
 binding should choose the compile binding
 https://learn.microsoft.com/en-us/dotnet/maui/fundamentals/data-binding/compiled-bindings?view=net-maui-8.0
+
+Hiding string
+https://github.com/obfuscar/obfuscar/issues/318

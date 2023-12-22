@@ -12,4 +12,9 @@
 	<Module file="SampleApp.dll" >
 	</Module>
 	
+	<!--
+		workaround for hiding string
+		https://github.com/obfuscar/obfuscar/issues/318
+	-->
+	<AssemblySearchPath path="C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.0"/>
 </Obfuscator>
