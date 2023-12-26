@@ -11,7 +11,6 @@ namespace SampleApp
             InitializeComponent();
         }
 
-        [Obfuscation(Exclude = true)]
         private void OnCounterClicked(object sender, EventArgs e)
         {
             count++;
