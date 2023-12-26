@@ -19,3 +19,15 @@ https://learn.microsoft.com/en-us/dotnet/maui/fundamentals/data-binding/compiled
 
 Hiding string
 https://github.com/obfuscar/obfuscar/issues/318
+
+Research:
+
+https://github.com/obfuscar/obfuscar/issues/299
+
+https://learn.microsoft.com/en-us/visualstudio/ide/dotfuscator/?view=vs-2022#about-dotfuscator-community
+
+https://github.com/XenocodeRCE/neo-ConfuserEx
+
+https://github.com/mkaring/ConfuserEx
+
+https://github.com/sunnamed434/BitMono
